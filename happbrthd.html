@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<title>С днем рождения</title>
+
+<style>
+body{
+    font-family: Arial, sans-serif;
+    background: linear-gradient(135deg,#ffe6f2,#fff5e6);
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    height:100vh;
+    margin:0;
+    text-align:center;
+}
+
+.container{
+    background:white;
+    padding:30px;
+    border-radius:25px;
+    box-shadow:0 0 20px rgba(0,0,0,0.1);
+    max-width:450px;
+}
+
+button{
+    padding:12px 20px;
+    margin-top:15px;
+    border:none;
+    border-radius:20px;
+    font-size:16px;
+    cursor:pointer;
+}
+
+.pink{ background:#ffb6c1; }
+.gray{ background:#ddd; }
+
+textarea{
+    width:100%;
+    height:260px;
+    margin-top:15px;
+    padding:12px;
+    border-radius:15px;
+    font-size:14px;
+}
+
+img{
+    width:100%;
+    border-radius:20px;
+    margin-top:15px;
+    object-fit: cover;
+}
+
+.hidden{ display:none; }
+
+.fade{ animation: fade 0.5s ease; }
+
+@keyframes fade{
+    from{opacity:0;}
+    to{opacity:1;}
+}
+
+iframe{
+    width:100%;
+    margin-top:15px;
+    border:none;
+    border-radius:15px;
+}
+</style>
+</head>
+
+<body>
+
+<div class="container fade" id="page1">
+    <h1>С днем рождения, мой милый!! (^o^)/</h1>
+
+    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSsFAU-5nqZrdpwxmCKUHePzru3ySFC7p_v8g&s">
+
+    <iframe src="https://open.spotify.com/embed/track/5mtTAScDytxMMqZj14NmlN"
+    height="80"></iframe>
+
+    <p>Желаю счастья, радости и исполнения желаний ❤️</p>
+    <button class="pink" onclick="showPage('page2')">Ой ой, тебе письмо!! Откроешь?</button>
+</div>
+
+<div class="container fade hidden" id="page2">
+    <img src="https://avatars.mds.yandex.net/i?id=cce16de46e54346610ac4abdf235f65473d8d462-6903367-images-thumbs&n=13">
+
+    <p>Ты хочешь прочитать поздравительное письмо?</p>
+    <button class="pink" onclick="showPage('page3')">Даа! (^人^)</button>
+    <button class="gray" onclick="showPage('page4')">нееет.. (почему:&lt;)</button>
+</div>
+
+<div class="container fade hidden" id="page3">
+    <h2>💌 Письмо</h2>
+
+    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS15FPH9XbkJeCtCpCwUJkQjml9Gi9f3klJJw&s">
+
+    <textarea>
+привет-привет милый!!! поздравляю от всего сердца тебя с днем рождения, я правда очень при очень ценю тебя и пишу этот текст от всего сердца.
+
+За все-все это время, а то есть 341 день, или же 11 месяцев и 4 дня, я поняла, насколько ты мне близок и насколько я люблю тебя. в твой 14 день рождения, желаю тебе огромных успехов во всем, что бы ты не расстраивался из-за всякой мелочи, что бы у тебя было куча друзей, а главное что бы они были близкими!!
+
+если бы я могла, клянусь, подарила бы тебе весь мир. но к сажалению я только 12 летняя школота :^. я надеюсь это будет далеко не 1 твой день рождение который мы справим вместе с тобой!! я оч оч люблю тебяя, помни
+
+не описать словами,почему я влюбилась в тебя и люблю сейчас. ведь ты настолько красив, что ни одни звезды, закаты, рассветы, солнечные затмения, которые все постоянно фоткают не сравнятся с тобой. а так же я полюбила тебя не только из за внешности,не падумаай! ты очень заботливый, добрый, милый. А ещее, ты самый самый хороший и милый парень которого я только видалаа!!
+
+как заключение, поздравляю тебя еще раз с днем рождения, обязательно желаю всего всего и много, исполнения всех желаний, здоровья друзей и благопалучая. люблю,цемаю,и крепко обнимаю! :3
+    </textarea>
+</div>
+
+<div class="container fade hidden" id="page4">
+    <p>ээй, почему? ( ;｀Д´)</p>
+    <button class="pink" onclick="showPage('page2')">Вернуться назад</button>
+</div>
+
+<script>
+function showPage(id){
+    document.querySelectorAll('.container').forEach(el=>{
+        el.classList.add('hidden');
+    });
+    document.getElementById(id).classList.remove('hidden');
+}
+</script>
+
+</body>
+</html>
